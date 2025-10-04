@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="RegressionSuite" verbose="1">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="AuthTests">
+        <classes>
+            <class name="org.azimjon.project.ui.TestSignUpFlow"/>
+            <class name="org.azimjon.project.ui.TestSignInFlow"/>
+            <class name="org.azimjon.project.ui.TestNewsletterSaving"/>
+        </classes>
+    </test>
+</suite>

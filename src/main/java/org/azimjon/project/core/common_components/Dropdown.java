@@ -10,17 +10,17 @@ public class Dropdown extends BaseElement {
     }
 
     public void selectByIndex(int index) {
-        Select select = new Select(getElement());
-        select.selectByIndex(index);
+        new Select(getElement())
+                .selectByIndex(index);
     }
 
     public void selectByText(String text) {
-        Select select = new Select(getElement());
-        select.selectByVisibleText(text);
+        new Select(getElement())
+                .selectByVisibleText(text);
     }
 
     public void selectByValue(String value) {
-        Select select = new Select(getElement());
-        select.selectByValue(value);
+        new Select(getElement())
+                .selectByValue(value);
     }
 }

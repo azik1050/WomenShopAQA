@@ -15,4 +15,5 @@ public class HomePage extends BasePage {
     public WebElement getPopupMessage() {
         return popupMessage.getElement();
     }
+
 }

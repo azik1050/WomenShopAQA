@@ -8,15 +8,35 @@ import java.util.Scanner;
 
 public class Kata {
     public static void main(String[] args) {
-        System.out.println(getUserById("!234"));
-        StringBuilder as = new StringBuilder();
-        as.append("1");
-        as.
-        System.out.println(as);
+        System.out.println();
     }
 
-    public static String getUserById(String id) {
-        String query = String.format("SELECT * FROM users WHERE id = %s", id);
-        return query;
+    public static Double calculate(final double numberOne, final String operation, final double numberTwo) {
+        Double Result = null;
+        switch (operation) {
+            case "+":
+                Result = numberOne + numberTwo;
+                break;
+            case "-":
+                Result = numberOne - numberTwo;
+                break;
+            case "*":
+                Result = numberOne * numberTwo;
+                break;
+            case "/":
+                if (numberTwo == 0) {
+                    Result = null;
+                } else {
+                    Result = numberOne / numberTwo;
+                }
+                break;
+            case "m":
+                Result = null;
+                break;
+            default:
+                throw new IllegalArgumentException();
+        }
+        return Result;
     }
+
 }
